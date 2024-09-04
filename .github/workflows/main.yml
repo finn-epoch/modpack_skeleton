@@ -1,0 +1,25 @@
+name: Publish Mod
+
+# Run when a new release is... released
+on: 
+  release:
+    types: [published]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      # Use checkout to publish the files in your repo
+      - uses: actions/checkout@v4
+      - uses: GreenTF/upload-thunderstore-package@v4.3
+        with:
+          namespace: Skeleton
+          description: A modpack skeleton
+          token: ${{ secrets.THUNDERSTORE_API_TOKEN }}
+          name: ModpackSkeleton
+          version: ${{ github.ref_name }}
+          community: valheim
+          repo: valheim.thunderstore.io
+          categories: |
+            ashlands-update
+            modpacks

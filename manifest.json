@@ -1,0 +1,10 @@
+{
+  "name": "ModpackSkeleton",
+  "version_number": "1.0.0",
+  "website_url": "https://github.com/username/modpack_skeleton",
+  "description": "Modpack Skeleton",
+  "dependencies": [
+    "denikson-BepInExPack_Valheim-5.4.2202",
+    "ValheimModding-Jotunn-2.20.3"
+    ]
+}
